@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Test Task</title>
+    <meta http-equiv="Content-Type" content="text/html; charset-UTF-8"/>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Username</th>
+        <th>Id</th>
+        <th>Body</th>
+        <th>Post ID</th>
+        <th>Updated At</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.body}"></td>
+        <td th:text="${user.postId}"></td>
+        <td th:text="${user.updatedAt}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
